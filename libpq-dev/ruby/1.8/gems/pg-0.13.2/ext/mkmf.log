@@ -1,0 +1,15 @@
+find_executable: checking for pg_config... -------------------- no
+
+--------------------
+
+find_header: checking for libpq-fe.h... -------------------- no
+
+"/usr/bin/gcc-4.0 -E -I. -I/opt/local/lib/ruby/1.8/i686-darwin9 -I. -I/opt/local/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE  -I/opt/local/include -O2 -arch i386  -fno-common -pipe -fno-common    conftest.c -o conftest.i"
+conftest.c:1:22: error: libpq-fe.h: No such file or directory
+checked program was:
+/* begin */
+1: #include <libpq-fe.h>
+/* end */
+
+--------------------
+

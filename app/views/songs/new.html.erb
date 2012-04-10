@@ -1,0 +1,36 @@
+<h1>Submit a Song</h1>
+
+<p>
+ <a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">Need help with this?</a> 
+</p>
+
+<div id="light" class="white_content">
+	<p> 1. Open <a href="http://www.grooveshark.com">Grooveshark</a> in a new tab</p>
+	<p> 2. Sign in or create an account </p>
+	<p> 3. Find the song you want to add </p>
+	<p> 4. Click the Options tab (triangle pointing down) next to the song title </p>
+	<p> 5. Select "Share Song" from the drop-down menu </p>
+	<p> 6. Click "More", then click "Embed" </p>
+	<p> 7. Click "Copy to Clipboard" </p>
+	<p> 8. <a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">Close this window</a>
+	    and paste the link in the box </p>
+
+
+
+</div>
+
+<div id="fade" class="black_overlay"></div>
+
+
+<%= form_for(@song) do |f| %>
+  <%= render 'shared/error_messages' %>
+  <div class="field">
+    <%= f.label "Embed a Grooveshark widget:" %><br />
+    <%= f.text_area :link, :size => 70 %><br />
+    <%= f.label "If link is invalid, try deleting the extra line at the end." %><br />
+
+  </div>
+  <div class="actions">
+    <%= f.submit "Submit" %>
+  </div>
+<% end %>
