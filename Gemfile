@@ -5,14 +5,13 @@ gem 'rails', '3.0.11'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'pg'
-
 gem "haml"
 gem "sass"
 
 group :development do
   gem 'rspec-rails', '2.6.1'
   gem 'annotate', '2.4.0'
+  gem 'sqlite3-ruby', '1.2.5', :require => 'sqlite3'
 end
 
 group :test do
