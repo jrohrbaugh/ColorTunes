@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>CFBundleDevelopmentRegion</key>
+		<string>English</string>
+		<key>CFBundleIdentifier</key>
+		<string>com.apple.xcode.dsym.conftest</string>
+		<key>CFBundleInfoDictionaryVersion</key>
+		<string>6.0</string>
+		<key>CFBundlePackageType</key>
+		<string>dSYM</string>
+		<key>CFBundleSignature</key>
+		<string>????</string>
+		<key>CFBundleShortVersionString</key>
+		<string>1.0</string>
+		<key>CFBundleVersion</key>
+		<string>1</string>
+		<key>dSYM_UUID</key>
+		<dict>
+			<key>i386</key>
+			<string>A407A68A-BA32-C7FA-A13C-E0A1E3C01127</string>
+		</dict>
+	</dict>
+</plist>
