@@ -1,7 +1,7 @@
 class CreateSongs < ActiveRecord::Migration
   def self.up
     create_table :songs do |t|
-      t.string :text, :limit =>1000
+      t.text :link
 
       t.timestamps
     end
