@@ -46,7 +46,6 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.18)
     nokogiri (1.5.2)
-    pg (0.13.2)
     polyglot (0.3.3)
     rack (1.2.5)
     rack-mount (0.6.14)
@@ -83,7 +82,7 @@ GEM
       activesupport (~> 3.0)
       railties (~> 3.0)
       rspec (~> 2.6.0)
-    sass (3.1.15)
+    sass (3.1.16)
     sqlite3-ruby (1.2.5)
     thin (1.3.1)
       daemons (>= 1.0.9)
@@ -105,7 +104,6 @@ PLATFORMS
 DEPENDENCIES
   annotate (= 2.4.0)
   haml
-  pg
   rails (= 3.0.11)
   rspec-rails (= 2.6.1)
   sass
