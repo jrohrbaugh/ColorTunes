@@ -1,9 +1,15 @@
 ColorTunes::Application.routes.draw do
-  resources :songs
+  
+  resources :songs do
+    resources :colors
+  end
   
   match '/submit', :to => 'songs#new'
   
+  match '/songs/:id', :to => 'songs#show'
+  
   root :to => 'pages#home'
+  
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

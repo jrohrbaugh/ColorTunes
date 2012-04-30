@@ -3,6 +3,7 @@ class SongsController < ApplicationController
   def show
   	@song = Song.find(params[:id])
   	@player = @song.link
+  	@color = @song.colors.build
   end
   
   def new
@@ -16,9 +17,9 @@ class SongsController < ApplicationController
       flash[:success] = "Success!"
       redirect_to @song
     else
-      @title = "Sign up"
+      @title = "Submit a song"
       render 'new'
     end
   end
-
+  
 end
