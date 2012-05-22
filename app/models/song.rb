@@ -23,6 +23,6 @@ class Song < ActiveRecord::Base
     [:red, :green, :blue].map{ |c| colors.average(c).to_i }
   end
   def average_color_hex
-    "#" + average_color.map{ |c| c.to_s(16) }.join
+    "#" + average_color.map{ |c| c.to_s(16).rjust(2,"0") }.join
   end
 end
