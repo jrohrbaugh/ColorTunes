@@ -1,3 +1,4 @@
+# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -10,13 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120418193952) do
+ActiveRecord::Schema.define(:version => 20120522180345) do
 
   create_table "colors", :force => true do |t|
     t.integer  "red"
     t.integer  "blue"
     t.integer  "green"
     t.integer  "song_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "playlists", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end
