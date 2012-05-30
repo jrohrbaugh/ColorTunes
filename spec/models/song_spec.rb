@@ -33,10 +33,9 @@ describe Song do
   
   it "should reject duplicate links" do
     # Put a song with given link into the database.
-    repeat_link = link
-    Song.create!(:link => repeat_link)
-    song_with_duplicate_email = Song.new(:link => repeat_link)
-    song_with_duplicate_email.should_not be_valid
+    Song.create!(:link => link)
+    song_with_duplicate_link = Song.create!(:link => link)
+    song_with_duplicate_link.should_not be_valid
   end
 
   describe "#average_color" do

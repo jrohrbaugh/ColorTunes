@@ -28,6 +28,11 @@ ActiveRecord::Schema.define(:version => 20120530151221) do
     t.datetime "updated_at"
   end
 
+  create_table "playlists", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "songs", :force => true do |t|
     t.text     "link"
     t.datetime "created_at"

@@ -189,14 +189,6 @@
 
  	   	 </div>
 	 	 </div>
-
-		<%= form_for [Playlist.new, @color] do |f| %>
-		   <%= f.hidden_field :red, :id => 'redValue' %>
-		   <%= f.hidden_field :green, :id => 'greenValue' %>
-		   <%= f.hidden_field :blue, :id => 'blueValue' %>
-
-		   <%= f.submit "Create Playlist!" %>
-		 <% end %>
 	
 		</body>
 		</html>
