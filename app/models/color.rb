@@ -1,5 +1,5 @@
 class Color < ActiveRecord::Base
-  attr_accessible :red, :green, :blue, :song_id
+  attr_accessible :red, :green, :blue, :colorable_id, :colorable_type
 
-  belongs_to :song
+  belongs_to :colorable, :polymorphic => true
 end

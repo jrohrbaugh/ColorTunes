@@ -4,7 +4,8 @@ class AddColors < ActiveRecord::Migration
       t.integer :red
       t.integer :blue
       t.integer :green
-      t.references :song
+      t.integer :colorable_id
+      t.string :colorable_type
       t.timestamps
     end
   end

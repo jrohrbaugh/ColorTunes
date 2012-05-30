@@ -1,23 +1,50 @@
 class ColorsController < ApplicationController
 
-  
 
-  def create 
-  	@song = Song.find(params[:song_id])
-  
-    @color = @song.colors.build(params[:color])
+
+  def show
+    @color = Color.find(params[:id])
+  end
+
+  def new
+    @color = Color.new
+  end
+
+  def create   
+    @colorable = find_colorable
+    @color = @colorable.colors.build(params[:color])
     
     if @color.save
-      flash[:success] = "Success!"
-      redirect_to @song
+      flash[:success] = "Success"
+      if @color.colorable_id = "song"
+        redirect_to :back
+      else
+        #path for playlists
+        redirect_to :id => nil
+      end
+
     else
       flash[:failure] = "Failure!"
-      redirect_to @song
+        if @color.colorable_id = "song"
+        redirect_to :back
+        else
+        #path for playlists
+        redirect_to :id => nil
+      end
     end
   end
-  
-  def show
-  	@color = Color.find(params[:id])
+
+  private
+
+  def find_colorable
+    params.each do |name, value|
+      if name =~ /(.+)_id$/
+        return $1.classify.constantize.find(value)
+      end
+    end
+    nil
   end
+  
+
 
 end

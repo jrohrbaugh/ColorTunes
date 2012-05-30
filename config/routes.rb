@@ -1,7 +1,11 @@
 ColorTunes::Application.routes.draw do
   
   resources :songs do
-    resources :colors
+      resources :colors
+  end
+ 
+  resources :playlists do
+      resources :colors
   end
   
   match '/submit', :to => 'songs#new'
