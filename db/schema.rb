@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120530151221) do
+ActiveRecord::Schema.define(:version => 20120601192927) do
 
   create_table "colors", :force => true do |t|
     t.integer  "red"
@@ -19,24 +19,29 @@ ActiveRecord::Schema.define(:version => 20120530151221) do
     t.integer  "green"
     t.integer  "colorable_id"
     t.string   "colorable_type"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
   end
 
   create_table "playlists", :force => true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
-  create_table "playlists", :force => true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
+  create_table "playlists_songs", :id => false, :force => true do |t|
+    t.integer "playlist_id", :null => false
+    t.integer "song_id",     :null => false
   end
+
+  add_index "playlists_songs", ["playlist_id", "song_id"], :name => "index_playlists_songs_on_playlist_id_and_song_id", :unique => true
 
   create_table "songs", :force => true do |t|
     t.text     "link"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.integer  "avg_red"
+    t.integer  "avg_green"
+    t.integer  "avg_blue"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   add_index "songs", ["link"], :name => "index_songs_on_link", :unique => true

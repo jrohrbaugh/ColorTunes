@@ -1,7 +1,6 @@
 class ColorsController < ApplicationController
 
 
-
   def show
     @color = Color.find(params[:id])
   end
@@ -15,7 +14,7 @@ class ColorsController < ApplicationController
     @color = @colorable.colors.build(params[:color])
     
     if @color.save
-      flash[:success] = "Success"
+      flash[:success] = "Color saved"
       if @color.colorable_id = "song"
         redirect_to :back
       else

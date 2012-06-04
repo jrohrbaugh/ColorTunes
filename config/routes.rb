@@ -9,6 +9,7 @@ ColorTunes::Application.routes.draw do
   end
   
   match '/submit', :to => 'songs#new'
+  match '/listen', :to => 'playlists#new'
   
   match '/songs/:id', :to => 'songs#show'
   

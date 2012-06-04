@@ -3,6 +3,10 @@ class CreateSongs < ActiveRecord::Migration
     create_table :songs do |t|
       t.text :link
 
+      t.integer :avg_red
+      t.integer :avg_green
+      t.integer :avg_blue
+
       t.timestamps
     end
   end

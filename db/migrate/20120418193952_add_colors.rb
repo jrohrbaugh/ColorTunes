@@ -2,8 +2,8 @@ class AddColors < ActiveRecord::Migration
   def self.up
     create_table :colors do |t|
       t.integer :red
-      t.integer :blue
       t.integer :green
+      t.integer :blue
       t.integer :colorable_id
       t.string :colorable_type
       t.timestamps
