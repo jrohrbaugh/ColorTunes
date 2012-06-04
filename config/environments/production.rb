@@ -65,5 +65,4 @@ ColorTunes::Application.configure do
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
   # config.force_ssl = true
   
-  4.5 config/environments/test.rb
 end
